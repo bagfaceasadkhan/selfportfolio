@@ -37,6 +37,7 @@ const Container = styled.div`
       font-size: 18px;
       font-weight: 500;
       text-decoration: none;
+      color: #2966bc;
       background-color: transparent;
       &:hover {
         color: #2966bc;
