@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import StarBorderIcon from "@mui/icons-material/StarBorder";
-
+import LaunchIcon from "@mui/icons-material/Launch";
+import GitHubIcon from "@mui/icons-material/GitHub";
 const ProjectsCard = (props) => {
   return (
     <Container>
@@ -9,8 +9,16 @@ const ProjectsCard = (props) => {
         <a href={props.data.gh || props.data.html_url}>{props.data.name}</a>
 
         {props.data.desc && <p>{props.data.desc}</p>}
-
-        <StarBorderIcon style={{ background: "#212023" }} />
+        <div className="icon-container">
+          <a href={props.data.gh || props.data.html_url} target={"_blank"}>
+            <GitHubIcon style={{ background: "#212023" }} />
+          </a>
+          {props.data.live && (
+            <a href={props.data.live} target={"_blank"}>
+              <LaunchIcon style={{ background: "#212023" }} />
+            </a>
+          )}
+        </div>
       </div>
     </Container>
   );
@@ -32,7 +40,12 @@ const Container = styled.div`
     height: 160px;
 
     background-color: transparent;
-
+    .icon-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+    }
     a {
       font-size: 18px;
       font-weight: 500;
@@ -53,5 +66,8 @@ const Container = styled.div`
 
   @media only screen and (max-width: 600px) {
     width: 100%;
+    .project-card {
+      width: 100%;
+    }
   }
 `;
