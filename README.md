@@ -1,7 +1,7 @@
 <h1>Self Portfolio Website</h1>
 <br/>
 <p>Portfolio website with minimalist design and mobile responsiveness along with all the necessary information.</p>
-<h3><a href="https://bagfaceak.herokuapp.com/">Visit Bagfaceak</a></h3>
+<h3><a href="https://bagfaceasadkhan.github.io/selfportfolio/">Visit Bagfaceak</a></h3>
 <h3>TechStack</h3>
 <ul>
 <li>React</li>
